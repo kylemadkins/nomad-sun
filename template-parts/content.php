@@ -12,24 +12,35 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<section class="flex items-center justify-center min-vh-100 cover bg-center hero" style="<?php if (get_field('hero_image')) : ?>background-image: url('<?php the_field('hero_image') ?>'); <?php endif; ?>">
-		<div class="white tc hero-content">
-			<h1 class="archivo mt0 mb3 bold ttu hero-heading"><?php the_title(); ?></h1>
-			<?php if (get_field('subheading')) : ?>
-				<h2 class="tenor mb6 mt0 normal ttu hero-subheading"><?php the_field('subheading'); ?></h2>
-			<?php endif; ?>
-			<?php if (get_field('date')) : ?>
-				<div class="archivo f6 ma0 bold ttu"><?php echo date('F Y', strtotime(get_field('date'))); ?></div>
-			<?php endif; ?>
-		</div>
-	</section>
-
 	<header class="entry-header">
 
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-
+		<?php
+		if (have_rows('content')) :
+			while (have_rows('content')) :
+				the_row();
+				if (get_row_layout() == 'header') : ?>
+					<div class="flex">
+						<div class="w-60 min-vh-100 cover bg-center" style="<?php if (get_field('hero_image')) : ?>background-image: url('<?php the_field('hero_image') ?>'); <?php endif; ?>"></div>
+						<div class="w-40 flex justify-center items-center tc ph4">
+							<div>
+								<div class="f6 ttu mt0 mb5 tracked archivo"><?php echo date('F Y', strtotime(get_field('date'))); ?></div>
+								<h1 class="f1 archivo mt0 mb3 ttu"><?php the_title(); ?></h1>
+								<h2 class="f1 tenor mt0 mb4 ttu"><?php the_field('subheading'); ?></h2>
+								<p class="f4 i measure"><?php the_sub_field('header_intro'); ?></p>
+							</div>
+						</div>
+					</div>
+				<?php elseif (get_row_layout() == 'text') : ?>
+					<div class="pv6 f4 measure-wide center text-content">
+						<?php the_sub_field('text_content'); ?>
+					</div>
+		<?php endif;
+			endwhile;
+		endif;
+		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
