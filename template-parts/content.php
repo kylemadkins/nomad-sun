@@ -23,7 +23,7 @@
 				the_row();
 				if (get_row_layout() == 'header') : ?>
 					<div class="flex-l">
-						<div class="w-100 w-60-l vh-50 vh-100-l cover bg-center" style="<?php if (get_field('hero_image')) : ?>background-image: url('<?php the_field('hero_image') ?>'); <?php endif; ?>"></div>
+						<div class="w-100 w-60-l vh-50 vh-100-l cover bg-center" style="<?php echo bg_image(get_field('hero_image')); ?>"></div>
 						<div class="w-100 w-40-l flex justify-center items-center tc ph3 ph4-l relative">
 							<div>
 								<div class="f6 ttu mt0 mb5 tracked archivo absolute-l top-0-l left-0-l w-100-l pt4">

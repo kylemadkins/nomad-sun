@@ -189,3 +189,10 @@ function date_as_month_year($datestr)
 {
 	return date('F Y', strtotime($datestr));
 }
+
+function bg_image($imageurl)
+{
+	if ($imageurl) {
+		return 'background-image: url(' . $imageurl . ');';
+	}
+}
