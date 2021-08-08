@@ -22,11 +22,11 @@
 			while (have_rows('content')) :
 				the_row();
 				if (get_row_layout() == 'header') :
-					get_template_part('template-parts/content-header', get_post_type());
+					get_template_part('template-parts/content-header');
 				elseif (get_row_layout() == 'text') :
-					get_template_part('template-parts/content-text', get_post_type());
+					get_template_part('template-parts/content-text');
 				elseif (get_row_layout() == 'image_gallery') :
-					get_template_part('template-parts/content-image-gallery', get_post_type());
+					get_template_part('template-parts/content-image-gallery');
 				endif;
 			endwhile;
 		endif;
