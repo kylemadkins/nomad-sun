@@ -27,7 +27,7 @@
 						<div class="w-100 w-40-l flex justify-center items-center tc ph3 ph4-l relative">
 							<div>
 								<div class="f6 ttu mt0 mb5 tracked archivo absolute-l top-0-l left-0-l w-100-l pt4">
-									<?php echo date('F Y', strtotime(get_field('date'))); ?>
+									<?php echo date_as_month_year(get_field('date')); ?>
 									<div class="mt3 line"></div>
 								</div>
 								<h1 class="f2 f1-l archivo mt0 mb3 ttu lh-title"><?php the_title(); ?></h1>

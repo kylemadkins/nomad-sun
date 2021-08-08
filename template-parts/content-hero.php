@@ -5,7 +5,7 @@
       <h2 class="tenor mb6 mt0 normal ttu hero-subheading"><?php the_field('subheading'); ?></h2>
     <?php endif; ?>
     <?php if (get_field('date')) : ?>
-      <div class="archivo f6 ma0 ttu tracked"><?php echo date('F Y', strtotime(get_field('date'))); ?></div>
+      <div class="archivo f6 ma0 ttu tracked"><?php echo date_as_month_year(get_field('date')); ?></div>
     <?php endif; ?>
   </div>
 </section>
