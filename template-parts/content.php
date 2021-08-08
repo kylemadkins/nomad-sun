@@ -24,12 +24,15 @@
 				if (get_row_layout() == 'header') : ?>
 					<div class="flex-l">
 						<div class="w-100 w-60-l vh-50 vh-100-l cover bg-center" style="<?php if (get_field('hero_image')) : ?>background-image: url('<?php the_field('hero_image') ?>'); <?php endif; ?>"></div>
-						<div class="w-100 w-40-l flex justify-center items-center tc ph4">
+						<div class="w-100 w-40-l flex justify-center items-center tc ph3 ph4-l relative">
 							<div>
-								<div class="f6 ttu mt0 mb5 tracked archivo"><?php echo date('F Y', strtotime(get_field('date'))); ?></div>
-								<h1 class="f1 archivo mt0 mb3 ttu"><?php the_title(); ?></h1>
-								<h2 class="f1 tenor mt0 mb4 ttu"><?php the_field('subheading'); ?></h2>
-								<p class="f4 i measure"><?php the_sub_field('header_intro'); ?></p>
+								<div class="f6 ttu mt0 mb5 tracked archivo absolute-l top-0-l left-0-l w-100-l pt4">
+									<?php echo date('F Y', strtotime(get_field('date'))); ?>
+									<div class="mt3 line"></div>
+								</div>
+								<h1 class="f2 f1-l archivo mt0 mb3 ttu lh-title"><?php the_title(); ?></h1>
+								<h2 class="f2 f1-l tenor mt0 mb4 mb5-l ttu lh-title"><?php the_field('subheading'); ?></h2>
+								<p class="f4 i measure mv0"><?php the_sub_field('header_intro'); ?></p>
 							</div>
 						</div>
 					</div>

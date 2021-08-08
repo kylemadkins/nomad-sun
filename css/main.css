@@ -36,3 +36,11 @@ body {
   letter-spacing: 0.05em;
   margin-top: 0;
 }
+
+.line {
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: #1c1c1c;
+}
