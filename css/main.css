@@ -9,9 +9,13 @@ body {
   font-family: 'Cardo', serif;
 }
 
-.archivo,
+.archivo-black,
 .text-content h3 {
   font-family: 'Archivo Black', sans-serif;
+}
+
+.archivo {
+  font-family: 'Archivo', sans-serif;
 }
 
 .tenor {
@@ -43,4 +47,13 @@ body {
   margin-right: auto;
   height: 1px;
   background-color: #1c1c1c;
+}
+
+.gallery-image img {
+  width: auto !important;
+  height: auto !important;
+}
+
+.caption {
+  max-width: 870px;
 }
