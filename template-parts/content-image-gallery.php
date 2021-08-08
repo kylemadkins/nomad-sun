@@ -1,4 +1,4 @@
-<div class="flex flex-wrap center container">
+<div class="flex flex-wrap center container ph4-l">
   <?php $images = get_sub_field('gallery'); ?>
   <?php foreach ($images as $image) : ?>
     <div class="ph3 mb4 h-100 gallery-image <?php echo image_width_class(get_field('width', $image['id'])); ?>">
