@@ -185,14 +185,27 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-function date_as_month_year($datestr)
+function date_as_month_year($date_str)
 {
-	return date('F Y', strtotime($datestr));
+	return date('F Y', strtotime($date_str));
 }
 
-function bg_image($imageurl)
+function bg_image($image_url)
 {
-	if ($imageurl) {
-		return 'background-image: url(' . $imageurl . ');';
+	if ($image_url) {
+		return 'background-image: url(' . $image_url . ');';
 	}
+	return '';
+}
+
+function image_width_class($width_str)
+{
+	if ($width_str == 'Full') {
+		return 'w-100';
+	} elseif ($width_str == 'Half') {
+		return 'w-50-ns';
+	} elseif ($width_str == 'Third') {
+		return 'w-third-ns';
+	}
+	return '';
 }
