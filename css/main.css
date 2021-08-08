@@ -50,10 +50,17 @@ body {
 }
 
 .gallery-image img {
+  /* !important because WordPress adds an inline height & width on image attachments */
   width: auto !important;
-  height: auto !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
 }
 
 .caption {
   max-width: 870px;
+}
+
+.container {
+  max-width: 1300px;
 }

@@ -33,13 +33,6 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<div class="gallery-image">
-		<?php echo wp_get_attachment_image(48, 'full'); ?>
-		<p class="archivo f5 o-50 pt3 mv0 caption">
-			<?php echo wp_get_attachment_caption(48); ?>
-		</p>
-	</div>
-
 	<footer class="entry-footer">
 		<?php // nomad_sun_entry_footer(); 
 		?>
